@@ -1,0 +1,13 @@
+<h4 mat-dialog-title [ngStyle]="{textAlign: 'center'}">{{company.companyName | uppercase}} Clothing</h4>
+
+<div mat-dialog-content [ngStyle]="{textAlign: 'center'}">
+    <h4 id="highlight">Contact me:<br>{{company.companyEmail}}</h4>
+    <h4 id="highlight">Tax Code: {{company.companyTaxCode}}</h4>
+    <img src="{{company.companyPhoto}}" width="100">
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="onOK()">
+        OK
+    </button>
+</div>

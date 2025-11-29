@@ -1,0 +1,14 @@
+<h3 class="title">List of Store Categories</h3>
+
+<table [ngStyle]="{width: '100%'}">
+    <tr>
+        <th>Category ID</th>
+        <th>Description</th>
+        <th>Picture</th>
+    </tr>
+    <tr *ngFor="let cat of catInfo">
+        <td [ngStyle]="{backgroundColor: 'red'}">{{cat.catid}}</td>
+        <td [ngStyle]="{backgroundColor: 'orange'}">{{cat.description}}</td>
+        <td [ngStyle]="{backgroundColor: 'green'}"><img src="../../assets/images/{{cat.catimg}}" width="50px"></td>
+    </tr>
+</table>

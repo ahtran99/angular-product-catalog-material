@@ -1,0 +1,16 @@
+<h3 id="title">Click a category button to view items for that category</h3>
+
+<mat-grid-list cols="5">
+    <mat-grid-tile *ngFor="let cls of catInfo">
+        <button mat-fab color="accent" 
+            (click)="displayJSON(cls.catid)">
+            <img src="../../assets/images/{{cls.catimg}}" width="25px">
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<hr>
+
+<div>
+    <p [innerHTML]="outArea"></p>
+</div>

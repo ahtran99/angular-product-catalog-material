@@ -1,0 +1,35 @@
+<app-header [headerInfo]="company"></app-header>
+
+<button mat-fab color="primary" (click)="aboutMe()" [ngStyle]="{display: 'block', margin: 'auto'}">ME</button>
+
+<mat-tab-group mat-stretch-tabs color="warn" class="example-stretched-tabs mat-elevation-z4" [ngStyle]="{textAlign: 'center'}">
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Categories
+            <mat-icon color="warn">
+                <span class="material-symbols-outlined">
+                    description
+                </span>
+            </mat-icon>
+        </ng-template>
+
+        <app-categories [catInfo]="categories"></app-categories>
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Products by Category
+            <mat-icon color="warn">
+                <span class="material-symbols-outlined">
+                    checkroom
+                </span>
+            </mat-icon>
+        </ng-template>
+
+        <app-products [prodInfo]="products" [catInfo]="categories"></app-products>
+    </mat-tab>
+
+</mat-tab-group>
+
+<app-footer></app-footer>
